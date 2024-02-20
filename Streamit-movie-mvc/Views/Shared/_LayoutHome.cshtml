@@ -1,0 +1,35 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Streamit-movie</title>
+    
+    @* import data css *@
+    @await Html.PartialAsync("../Home/Import/_Head")
+
+</head>
+<body class="  ">
+@* loading *@
+@await Html.PartialAsync("../Home/Component/_Loading")
+
+@* import header *@
+@await Html.PartialAsync("../Home/Header/_Header")
+
+@RenderBody()
+@await RenderSectionAsync("Scripts", required: false)
+
+@* import footer *@
+@await Html.PartialAsync("../Home/Footer/_Footer")
+
+@* import data js *@
+@await Html.PartialAsync("../Home/Import/_Js")
+
+@* import component *@
+@await Html.PartialAsync("../Home/Component/_BackToTop")
+@*@await Html.PartialAsync("../Home/Component/_RTS")*@
+
+</body>
+</html>

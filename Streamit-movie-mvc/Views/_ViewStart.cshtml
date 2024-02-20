@@ -1,0 +1,9 @@
+﻿@{
+    if (ViewContext.RouteData.Values["controller"].ToString().Equals("Home", StringComparison.OrdinalIgnoreCase))
+    {
+        Layout = "_LayoutHome";
+    } else if (ViewContext.RouteData.Values["controller"].ToString().Equals("Dashboard", StringComparison.OrdinalIgnoreCase))
+    {
+        Layout = "_LayoutDashboard";
+    }
+}

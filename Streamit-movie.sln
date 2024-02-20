@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Streamit-movie-mvc", "Streamit-movie-mvc\Streamit-movie-mvc.csproj", "{D34CA78C-E3F4-4055-8111-DDA1F03540A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D34CA78C-E3F4-4055-8111-DDA1F03540A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D34CA78C-E3F4-4055-8111-DDA1F03540A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D34CA78C-E3F4-4055-8111-DDA1F03540A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D34CA78C-E3F4-4055-8111-DDA1F03540A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3392B54-6AAE-4216-8EE6-F7EA1555B23B}
+	EndGlobalSection
+EndGlobal
