@@ -1,7 +1,9 @@
-﻿<main class="main-content">
+﻿@using Streamit_movie_mvc.Models
+
+<main class="main-content">
 
     <!--bread-crumb-->
-    <div class="iq-breadcrumb" style="background-image: url(home/images/pages/01.html);">
+    <div class="iq-breadcrumb" style="background-image: url(/home/images/pages/01.html);">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-sm-12">
@@ -23,97 +25,22 @@
           <h4 class="main-title text-capitalize mb-0">Movie Genres</h4>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
-          <div class="col mb-4">
+          @foreach (var category in Model)
+          {   
+            <div class="col mb-4">
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/01.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/@(category.CategoryId).html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Action</a></h6>
+                        class="text-decoration-none text-capitalize line-count-2 p-2">@category.Name</a></h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/02.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Adventure</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/03.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Animation</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/04.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Comedy</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/05.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Drama</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/06.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Family</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-4">
-            <div class="iq-card-geners card-hover-style-two">
-              <div class="block-images position-relative w-100">
-                <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/07.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
-                  <div class="blog-description">
-                    <h6 class="mb-0 iq-title"><a href="view-all-movie.html"
-                        class="text-decoration-none text-capitalize line-count-2 p-2">Fantasy</a></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          }
         </div>
         <div class="text-center">
           <div class="iq-button">
@@ -136,7 +63,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/01.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/01.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">4K Ultra</a></h6>
@@ -149,7 +76,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/02.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/02.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">Brother</a></h6>
@@ -162,7 +89,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/03.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/03.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">Brother Relationship</a></h6>
@@ -175,7 +102,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/04.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/04.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">Kings</a></h6>
@@ -188,7 +115,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/05.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/05.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">music</a></h6>
@@ -201,7 +128,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/06.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/06.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">Mythology</a></h6>
@@ -214,7 +141,7 @@
             <div class="iq-card-geners card-hover-style-two">
               <div class="block-images position-relative w-100">
                 <div class="img-box rounded position-relative">
-                  <img src="home/images/genre/07.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
+                  <img src="~/home/images/genre/07.html" alt="geners-img" class="img-fluid object-cover w-100 rounded">
                   <div class="blog-description">
                     <h6 class="mb-0 iq-title"><a href="#"
                         class="text-decoration-none text-capitalize line-count-2 p-2">Premieres</a></h6>

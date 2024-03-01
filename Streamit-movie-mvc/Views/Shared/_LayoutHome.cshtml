@@ -1,4 +1,12 @@
-﻿@using Microsoft.AspNetCore.Mvc.Rendering
+﻿@using Streamit_movie_mvc.Utilities
+@{
+    string controllerName = ViewContext.RouteData.Values["action"]?.ToString();
+    string className = "custom-header-relative";
+    if (Constraint.Actions.Contains(className))
+    {
+        className = "";
+    }
+}
 
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
@@ -11,9 +19,9 @@
     @await Html.PartialAsync("../Home/Import/_Head")
 
 </head>
-<body class="  ">
+<body class=" @className ">
 @* loading *@
-@await Html.PartialAsync("../Home/Component/_Loading")
+@await Html.PartialAsync("../Home/Components/_Loading")
 
 @* import header *@
 @await Html.PartialAsync("../Home/Header/_Header")
@@ -24,12 +32,15 @@
 @* import footer *@
 @await Html.PartialAsync("../Home/Footer/_Footer")
 
+@* import component *@
+@await Html.PartialAsync("../Home/Components/_BackToTop")
+@*@await Html.PartialAsync("../Home/Component/_RTS")*@
+
+@* import toast *@
+@await Html.PartialAsync("_Toast")
+
 @* import data js *@
 @await Html.PartialAsync("../Home/Import/_Js")
-
-@* import component *@
-@await Html.PartialAsync("../Home/Component/_BackToTop")
-@*@await Html.PartialAsync("../Home/Component/_RTS")*@
 
 </body>
 </html>
